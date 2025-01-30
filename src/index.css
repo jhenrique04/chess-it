@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+
+.split {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  background-color: black;
+  color: white;
+}
+
+.right {
+  background-color: white;
+  color: black;
+}
+
+.navbar-image {
+  position: absolute;
+  top: 23px;
+  left: 0;
+  width: 1449px; 
+  height: auto;
+}
+
+.piece-right-image {
+  width: 244px;
+  height: 244px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+}
+
