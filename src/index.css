@@ -4,13 +4,13 @@
   box-sizing: border-box;
 }
 
-.App {
+.app {
   width: 100vw;
-  height: 100vh;
+  height: 1024px;
   display: flex;
   overflow: hidden;
+  position: relative;
 }
-
 
 .split {
   flex: 1;
@@ -22,27 +22,86 @@
 .left {
   background-color: black;
   color: white;
+  position: relative;
 }
 
 .right {
   background-color: white;
   color: black;
+  position: relative;
 }
 
 .navbar-image {
   position: absolute;
   top: 23px;
   left: 0;
-  width: 1449px; 
+  width: 200px;
   height: auto;
+  z-index: 10;
 }
 
 .piece-right-image {
-  width: 244px;
+  width: 214px;
   height: 244px;
   position: absolute;
   bottom: 0;
   right: 0;
   opacity: 1;
+}
+
+.div-board {
+  width: 445px;
+  height: 469px;
+  position: absolute;
+  top: 278px;
+  left: 116px;
+  overflow: hidden;
+}
+
+.container-left {
+  width: 445px;
+  height: 462px;
+  background-color: #D9D9D9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-left {
+  position: absolute;
+  top: 229px;
+  left: 334px;
+  width: 42px;
+  height: 42px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.image-2 {
+  position: absolute;
+  top: 778px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 54px;
+  height: 122px;
+}
+
+.image-1 {
+  position: absolute;
+  top: 784px;
+  left: calc(50% - 180px);
+  width: 109px;
+  height: 109px;
+}
+
+.image-3 {
+  position: absolute;
+  top: 784px;
+  left: calc(50% + 73px);
+  width: 109px;
+  height: 109px;
 }
 
