@@ -1,0 +1,27 @@
+dog
+person
+cat
+tv
+car
+meatballs
+marinara sauce
+tomato soup
+chicken noodle soup
+french onion soup
+chicken breast
+ribs
+pulled pork
+hamburger
+cavity
+white_pawn
+white_rook
+white_knight
+white_bishop
+white_queen
+white_king
+black_pawn
+black_rook
+black_knight
+black_bishop
+black_queen
+black_king
