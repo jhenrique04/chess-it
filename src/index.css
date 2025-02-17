@@ -6,7 +6,7 @@
 
 .app {
   width: 100vw;
-  height: 1024px;
+  height: 100vh;
   display: flex;
   overflow: hidden;
   position: relative;
@@ -41,8 +41,8 @@
 }
 
 .piece-right-image {
-  width: 214px;
-  height: 244px;
+  width: 130px;
+  height: auto;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -53,7 +53,7 @@
   width: 445px;
   height: 469px;
   position: absolute;
-  top: 278px;
+  top: 15%;
   left: 116px;
   overflow: hidden;
 }
@@ -63,14 +63,14 @@
   height: 462px;
   background-color: #D9D9D9;
   position: absolute;
-  top: 50%;
+  top: 49%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .image-left {
   position: absolute;
-  top: 229px;
+  top: 9%;
   left: 47%;
   width: 42px;
   height: 42px;
@@ -82,26 +82,108 @@ body {
 
 .image-2 {
   position: absolute;
-  top: 778px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 54px;
-  height: 122px;
+  top: 89%;
+  left: 46%;
+  width: 40px;
+  height: auto;
 }
 
 .image-1 {
   position: absolute;
-  top: 784px;
+  top: 85%;
   left: calc(50% - 180px);
-  width: 109px;
-  height: 109px;
+  width: 85px;
+  height: auto;
 }
 
 .image-3 {
   position: absolute;
-  top: 784px;
+  top: 85%;
   left: calc(50% + 73px);
-  width: 109px;
-  height: 109px;
+  width: 85px;
+  height: auto;
 }
 
+/* Responsividade */
+
+@media (max-width: 786px) {
+  .app {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    height: 917px;
+  }
+
+  .split {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .container-left {
+    top: 53%;
+    width: 263px;
+    height: 273px;
+  }
+
+  .navbar-image {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: auto;
+    height: 29px;
+    z-index: 100;
+  }
+
+  .image-left {
+    top: 13%;
+  }
+
+  .image-1 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 151px;
+    left: 84%;
+  }
+
+  .image-2 {
+    width: 36px;
+    height: 81px;
+    top: 221px;
+    left: 87%;
+  }
+
+  .image-3 {
+    width: 60px;
+    height: 60px;
+    top: 312px;
+    left: 84%;
+  }
+
+  .div-board {
+    width: 267px;
+    height: 281px;
+    position: absolute;
+    top: 10%;
+    left: 17%;
+    overflow: hidden;
+  }
+
+  .div-board img{
+    width: 267px;
+    height: 281px;
+  }
+
+  .piece-right-image {
+    width: 107px;
+    height: auto;
+    right: 37%;
+  }
+}
