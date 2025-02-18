@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 function App() {
-    const [boardImage, setBoardImage] = useState("/images/board.png");
-    const videoRef = useRef(null);
+    const [boardImage, setBoardImage] = useState("");
+    const [videoStream, setVideoStream] = useState("");
 
     useEffect(() => {
         const updateBoard = () => {
@@ -10,34 +10,20 @@ function App() {
             setBoardImage(`http://192.168.1.13:5000/board?timestamp=${timestamp}`);
         };
 
+        updateBoard();
         const interval = setInterval(updateBoard, 1000);
-
         return () => clearInterval(interval);
     }, []);
 
     useEffect(() => {
-        navigator.mediaDevices.getUserMedia({ video: true })
-            .then((stream) => {
-                if (videoRef.current) {
-                    videoRef.current.srcObject = stream;
-                }
-            })
-            .catch((err) => {
-                console.error("Erro ao acessar a câmera: ", err);
-            });
-
-        return () => {
-            if (videoRef.current && videoRef.current.srcObject) {
-                videoRef.current.srcObject.getTracks().forEach(track => track.stop());
-            }
-        };
+        setVideoStream("http://192.168.1.13:5000/video");
     }, []);
 
     return (
         <div className="app">
             <div className="split left">
                 <div className="container-left">
-                    <video ref={videoRef} autoPlay playsInline className="camera-feed" />
+                    <img src={videoStream} alt="Camera Feed" className="camera-feed" />
                 </div>
             </div>
             <div className="split right">
