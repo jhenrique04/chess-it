@@ -17,7 +17,7 @@ if not os.path.exists(board_path):
     cv2.imwrite(board_path, blank_image)
 
 model = YOLO("../yolo/runs/detect/train5/weights/best.pt")
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(2)
 
 current_board_image = cv2.imread(board_path)
 cv2.imshow('Current Board', current_board_image)
