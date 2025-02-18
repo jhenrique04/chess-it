@@ -95,3 +95,4 @@ media/
 .vscode/
 frontend/node_modules/
 yolo/Data/
+current_board.png
