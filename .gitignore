@@ -96,3 +96,5 @@ media/
 frontend/node_modules/
 yolo/Data/
 current_board.png
+chessCV/current_board.png
+chessCV/current_board.svg
