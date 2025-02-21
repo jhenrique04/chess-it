@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.img-camera {
+  position: relative;
+  width: 42px;
+  height: 42px;
+}
+
+.img-navbar {
+  position: absolute;
+  width: 200px;
+  height: 38px;
+  top: 10px;
+}
+
+.img-piece {
+  position: absolute;
+  width: 160px;
+  height: 183px;
+  right: 0;
+  top: 0;
+}

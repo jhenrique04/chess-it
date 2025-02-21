@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
     const [boardImage, setBoardImage] = useState("");
@@ -21,8 +22,12 @@ function App() {
 
     return (
         <div className="app">
+            <img src="/images/Navbar.png" alt="Navbar" className="img-navbar" />
+            <img src="/images/Piece.png" alt="Piece" className="img-piece" />
+
             <div className="split left">
                 <div className="container-left">
+                    <img src="/images/Camera.svg" alt="Camera" className="img-camera" />
                     <img src={videoStream} alt="Camera Feed" className="camera-feed" />
                 </div>
             </div>
