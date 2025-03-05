@@ -58,5 +58,8 @@ npm start  # Start the frontend
 2. Open the frontend to visualize the real-time positions of the pieces.
 3. The YOLOv8 model is used internally for piece detection and recognition.
 
+## Preview
+![preview_image](preview_image.png)
+
 ## Contribution
 If you would like to contribute, feel free to open an issue or submit a pull request.
