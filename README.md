@@ -1,64 +1,62 @@
-# ChessCV Project
+# Chess-it
+This project aims to recognize chessboards using a YOLOv8 model trained to identify pieces and their positions. The goal is to process the board's image and make the results available through a web interface for users. The project is divided into three main components:
 
-## Descrição
-Este projeto tem como objetivo realizar o reconhecimento de tabuleiros de xadrez utilizando um modelo YOLOv8 treinado para identificar as peças e suas posições. Ele é dividido em três principais componentes:
+1. **backend** - Scripts responsible for image processing and running the recognition model.
+2. **frontend** - A React-based frontend application to display the processed information.
+3. **yolo** - The trained YOLOv8 model for piece detection on the board.
 
-1. **chessCV** - Scripts responsáveis pelo processamento de imagem e execução do modelo de reconhecimento.
-2. **frontend** - Aplicação frontend desenvolvida em React para exibição das informações processadas.
-3. **yolo** - Modelo YOLOv8 treinado para a detecção das peças no tabuleiro.
-
-## Estrutura do Projeto
+## Project Structure
 ```
-├── chessCV
-│   ├── cv_chess.py  # Script principal de reconhecimento
-│   ├── cv_chess_functions.py  # Funções auxiliares para processamento
-│   ├── api.py  # API em Flask para comunicação com o frontend
+├── backend
+│   ├── cv_chess.py  # Main recognition script
+│   ├── cv_chess_functions.py  # Helper functions for image processing
+│   ├── api.py  # Flask API for communication with the frontend
 │
 ├── frontend
-│   ├── src/  # Código-fonte do frontend em React
+│   ├── src/  # Frontend source code in React
 │   ├── public/
-│   ├── package.json  # Dependências do projeto frontend
+│   ├── package.json  # Frontend dependencies
 │
 ├── yolo
-│   ├── datasets/  # Pasta referente ao dataset
-│   ├── models/  # Arquivo do modelo
-│   ├── runs/  # Treinamentos feitos usando o modelo
+│   ├── datasets/  # Dataset directory
+│   ├── models/  # Model file
+│   ├── runs/  # Training results for the model
 │
-├── requirements.txt  # Dependências do projeto
-└── README.md  # Este arquivo
+├── requirements.txt  # Project dependencies for the backend
+└── README.md  # This file
 ```
 
-## Instalação e Execução
-### Pré-requisitos
-Certifique-se de ter instalado:
-- Python 3.8
-- Node.js e npm (para o frontend)
-- Dependências do projeto (definidas em `requirements.txt`)
+## Installation and Execution
+### Prerequisites
+Ensure you have installed:
+- Python 3.11.6
+- Node.js & npm
+- Project dependencies
 
-### Configuração e Execução do Backend (chessCV)
+### Setting Up and Running the Backend (chessCV)
 ```sh
-# Criar e ativar um ambiente virtual
+# Create and activate a virtual environment
 python -m venv .venv
-source .venv/bin/activate  # No Windows use: .venv\Scripts\activate
+source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
 
-# Instalar dependências
+# Install dependencies
 pip install -r requirements.txt
 
-# Executar API Flask
+# Run Flask API
 python chessCV/api.py
 ```
 
-### Configuração e Execução do Frontend
+### Setting Up and Running the Frontend
 ```sh
 cd frontend
-npm install  # Instalar dependências
-npm start  # Rodar o frontend
+npm install  # Install dependencies
+npm start  # Start the frontend
 ```
 
-## Uso
-1. Inicie o backend para processar imagens do tabuleiro de xadrez.
-2. Abra o frontend para visualizar a posição das peças em tempo real.
-3. O modelo YOLOv8 é usado internamente para detecção e reconhecimento.
+## Usage
+1. Start the backend to process images of the chessboard.
+2. Open the frontend to visualize the real-time positions of the pieces.
+3. The YOLOv8 model is used internally for piece detection and recognition.
 
-## Contribuição
-Caso queira contribuir, sinta-se à vontade para abrir uma issue ou um pull request.
+## Contribution
+If you would like to contribute, feel free to open an issue or submit a pull request.
